@@ -20,9 +20,16 @@ Compression=lzma
 ;Compression=none
 SolidCompression=yes
 WizardImageFile=installPicture.bmp
+ShowLanguageDialog=yes
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "en"; MessagesFile: "compiler:Default.isl"
+Name: "de"; MessagesFile: "compiler:Languages\German.isl"
+Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
+Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
+Name: "it"; MessagesFile: "compiler:Languages\Italian.isl"
+Name: "nl"; MessagesFile: "compiler:Languages\Dutch.isl"
+Name: "no"; MessagesFile: "compiler:Languages\Norwegian.isl"
 
 [Components]
 Name: "core"; Description: "Core Files"; Types:full compact custom;  Flags: fixed
@@ -40,6 +47,9 @@ Source: "F:\Programs\Qtpfsgui\imageformats\*"; DestDir: "{app}\imageformats\"; C
 Source: "F:\Programs\Qtpfsgui\html\*";         DestDir: "{app}\html\";         Components:doc;  Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "F:\Programs\Qtpfsgui\i18n\*";         DestDir: "{app}\i18n\";         Components:i18n; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+
+[Registry]
+Root: HKCU; Subkey: "Software\Qtpfsgui"; Flags: uninsdeletekey
 
 [Icons]
 Name: "{group}\Qtpfsgui"; Filename: "{app}\qtpfsgui.exe"
