@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=Qtpfsgui
-AppVerName=Qtpfsgui 1.9.1
+AppVerName=Qtpfsgui 1.9.2
 AppPublisher=Qtpfsgui Dev Team
 AppPublisherURL=http://qtpfsgui.sourceforge.net/
 AppSupportURL=http://qtpfsgui.sourceforge.net/
@@ -13,7 +13,7 @@ DefaultGroupName=Qtpfsgui
 AllowNoIcons=yes
 LicenseFile=..\..\Qtpfsgui\LICENSE
 OutputDir=output
-OutputBaseFilename=Qtpfsgui-windows-SETUP-v1.9.1
+OutputBaseFilename=Qtpfsgui-windows-SETUP-v1.9.2
 SetupIconFile=..\..\Qtpfsgui\images\qtpfsgui.ico
 Compression=lzma
 ; NO Compression only for testing
