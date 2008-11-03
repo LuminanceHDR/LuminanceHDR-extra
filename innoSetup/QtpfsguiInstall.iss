@@ -3,61 +3,68 @@
 
 [Setup]
 AppName=Qtpfsgui
-AppVerName=Qtpfsgui 1.9.2
+AppVerName=Qtpfsgui 2.0.0
 AppPublisher=Qtpfsgui Dev Team
 AppPublisherURL=http://qtpfsgui.sourceforge.net/
 AppSupportURL=http://qtpfsgui.sourceforge.net/
 AppUpdatesURL=http://qtpfsgui.sourceforge.net/
 DefaultDirName={pf}\Qtpfsgui
 DefaultGroupName=Qtpfsgui
-AllowNoIcons=yes
-LicenseFile=..\..\Qtpfsgui\LICENSE
+AllowNoIcons=true
+LicenseFile=LICENSE
 OutputDir=output
-OutputBaseFilename=Qtpfsgui-windows-SETUP-v1.9.2
-SetupIconFile=..\..\Qtpfsgui\images\qtpfsgui.ico
-Compression=lzma
+OutputBaseFilename=Qtpfsgui-windows-SETUP-v2.0.0
+SetupIconFile=qtpfsgui.ico
+Compression=lzma/ultra64
 ; NO Compression only for testing
 ;Compression=none
-SolidCompression=yes
+SolidCompression=true
 WizardImageFile=installPicture.bmp
 ShowLanguageDialog=yes
+LanguageDetectionMethod=locale
+VersionInfoVersion=2.0.0
+VersionInfoCompany=Qtpfsgui Dev Team
+AppID={{7020FC34-6E04-4858-924D-354B28CB2402}
+DisableReadyMemo=true
+ShowTasksTreeLines=true
+AlwaysUsePersonalGroup=false
+InternalCompressLevel=ultra64
 
 [Languages]
-Name: "en"; MessagesFile: "compiler:Default.isl"
-Name: "de"; MessagesFile: "compiler:Languages\German.isl"
-Name: "es"; MessagesFile: "compiler:Languages\Spanish.isl"
-Name: "fr"; MessagesFile: "compiler:Languages\French.isl"
-Name: "it"; MessagesFile: "compiler:Languages\Italian.isl"
-Name: "nl"; MessagesFile: "compiler:Languages\Dutch.isl"
-Name: "no"; MessagesFile: "compiler:Languages\Norwegian.isl"
+Name: en; MessagesFile: compiler:Default.isl
+Name: de; MessagesFile: compiler:Languages\German.isl
+Name: es; MessagesFile: compiler:Languages\Spanish.isl
+Name: fr; MessagesFile: compiler:Languages\French.isl
+Name: it; MessagesFile: compiler:Languages\Italian.isl
+Name: nl; MessagesFile: compiler:Languages\Dutch.isl
+Name: no; MessagesFile: compiler:Languages\Norwegian.isl
 
 [Components]
-Name: "core"; Description: "Core Files"; Types:full compact custom;  Flags: fixed
-Name: "doc";  Description: "Documenatation"; Types:full compact;
-Name: "i18n"; Description: "Translations"; Types:full compact;
+Name: core; Description: Core Files; Types: full compact custom; Flags: fixed
+Name: doc; Description: Documenatation; Types: full
+Name: i18n; Description: Translations; Types: full
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
+Name: quicklaunchicon; Description: {cm:CreateQuickLaunchIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
 
 [Files]
-Source: "F:\Programs\Qtpfsgui\qtpfsgui.exe";   DestDir: "{app}";               Components:core; Flags: ignoreversion
-Source: "F:\Programs\Qtpfsgui\*";              DestDir: "{app}";               Components:core; Flags: ignoreversion
-Source: "F:\Programs\Qtpfsgui\imageformats\*"; DestDir: "{app}\imageformats\"; Components:core; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "F:\Programs\Qtpfsgui\html\*";         DestDir: "{app}\html\";         Components:doc;  Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "F:\Programs\Qtpfsgui\i18n\*";         DestDir: "{app}\i18n\";         Components:i18n; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: D:\Programs\Qtpfsgui\qtpfsgui.exe; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: D:\Programs\Qtpfsgui\*; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: D:\Programs\Qtpfsgui\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: D:\Programs\Qtpfsgui\html\*; DestDir: {app}\html\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: D:\Programs\Qtpfsgui\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
-Root: HKCU; Subkey: "Software\Qtpfsgui"; Flags: uninsdeletekey
+Root: HKCU; Subkey: Software\Qtpfsgui; Flags: uninsdeletekey
 
 [Icons]
-Name: "{group}\Qtpfsgui"; Filename: "{app}\qtpfsgui.exe"
-Name: "{group}\{cm:ProgramOnTheWeb,Qtpfsgui}"; Filename: "http://qtpfsgui.sourceforge.net/"
-Name: "{group}\{cm:UninstallProgram,Qtpfsgui}"; Filename: "{uninstallexe}"
-Name: "{commondesktop}\Qtpfsgui"; Filename: "{app}\qtpfsgui.exe"; Tasks: desktopicon
-Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Qtpfsgui"; Filename: "{app}\qtpfsgui.exe"; Tasks: quicklaunchicon
+Name: {group}\Qtpfsgui; Filename: {app}\qtpfsgui.exe
+Name: {group}\{cm:ProgramOnTheWeb,Qtpfsgui}; Filename: http://qtpfsgui.sourceforge.net/
+Name: {group}\{cm:UninstallProgram,Qtpfsgui}; Filename: {uninstallexe}
+Name: {commondesktop}\Qtpfsgui; Filename: {app}\qtpfsgui.exe; Tasks: desktopicon
+Name: {userappdata}\Microsoft\Internet Explorer\Quick Launch\Qtpfsgui; Filename: {app}\qtpfsgui.exe; Tasks: quicklaunchicon
 
 [Run]
-Filename: "{app}\qtpfsgui.exe"; Description: "{cm:LaunchProgram,Qtpfsgui}"; Flags: nowait postinstall skipifsilent
-
+Filename: {app}\qtpfsgui.exe; Description: {cm:LaunchProgram,Qtpfsgui}; Flags: nowait postinstall skipifsilent
