@@ -1,5 +1,5 @@
-*** Qtpfsgui Windows DLL Package V4 ***
-This is the README.txt file for the Windows DLL Package V4 for Qtpfsgui.
+*** Qtpfsgui Windows DLL Package V5 ***
+This is the README.txt file for the Windows DLL Package V5 for Qtpfsgui.
 
 INSTALLING Qtpfsgui
 ===================
@@ -24,10 +24,12 @@ C:\qtpfsgui\libfftw3f-3.dll
 C:\qtpfsgui\jpeg62.dll
 C:\qtpfsgui\libtiff3.dll
 C:\qtpfsgui\zlib1.dll
-C:\qtpfsgui\libHalf-4.dll
-C:\qtpfsgui\libIex-4.dll
-C:\qtpfsgui\libIlmImf-4.dll
-C:\qtpfsgui\libIlmThread-4.dll
+C:\qtpfsgui\libHalf-6.dll
+C:\qtpfsgui\libIex-6.dll
+C:\qtpfsgui\libIlmImf-6.dll
+C:\qtpfsgui\libIlmThread-6.dll
+C:\qtpfsgui\libexiv2-5.dll
+C:\qtpfsgui\pthreadGC2.dll
 
 
 LICENSES
