@@ -1,15 +1,14 @@
-Qtpfsgui v1.8.10 README file.
+Qtpfsgui README file.
 
 *****WARNING*****
-Starting qtpfsgui 1.8.10, Windows users have to download the new
-``Windows DLL Package V4'', make sure to get it at:
-http://downloads.sourceforge.net/qtpfsgui/qtpfsgui-windows-DLLs-V4.zip
-If you already have "V4" you don't need to download it again.
+Starting qtpfsgui 1.9.3, Windows users have to download the new
+``Windows DLL Package V5'', make sure to get it at:
+http://downloads.sourceforge.net/qtpfsgui/qtpfsgui-windows-DLLs-V5.zip
 
 INSTALLING Qtpfsgui
 ===================
 1) Unzip this zip file in a folder (e.g. C:\qtpfsgui) on your harddisk.
-2) Extract the "Windows DLL Package V4" zip file into the folder
+2) Extract the "Windows DLL Package" zip file into the folder
 where you have the ``qtpfsgui.exe'' file.
 Make sure you enable the "Use folder names" option to unzip the DLL package.
 
@@ -17,7 +16,7 @@ For example, if you have the following layout:
 
 C:\qtpfsgui\qtpfsgui.exe
 
-You need to unzip the "Windows DLL Package V3" in the ``qtpfsgui'' folder. The result will be:
+You need to unzip the Windows DLL Package in the ``qtpfsgui'' folder. The result will be:
 
 C:\qtpfsgui\qtpfsgui.exe
 C:\qtpfsgui\imageformats\qjpeg4.dll
