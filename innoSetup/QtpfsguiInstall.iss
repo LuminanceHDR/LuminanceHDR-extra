@@ -2,19 +2,19 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 [Setup]
-AppName=Qtpfsgui
-AppVerName=Qtpfsgui 1.9.3
-AppPublisher=Qtpfsgui Dev Team
+AppName=LuminanceHDR
+AppVerName=LuminanceHDR 2.0.0
+AppPublisher=LuminanceHDR Dev Team
 AppPublisherURL=http://qtpfsgui.sourceforge.net/
 AppSupportURL=http://qtpfsgui.sourceforge.net/
 AppUpdatesURL=http://qtpfsgui.sourceforge.net/
-DefaultDirName={pf}\Qtpfsgui
-DefaultGroupName=Qtpfsgui
+DefaultDirName={pf}\LuminanceHDR
+DefaultGroupName=LuminanceHDR
 AllowNoIcons=true
 LicenseFile=LICENSE
 OutputDir=output
-OutputBaseFilename=Qtpfsgui-windows-SETUP-v1.9.3
-SetupIconFile=qtpfsgui.ico
+OutputBaseFilename=LuminanceHDR-windows-SETUP-v2.0.0
+SetupIconFile=luminance.ico
 Compression=lzma/ultra64
 ; NO Compression only for testing
 ;Compression=none
@@ -22,8 +22,8 @@ SolidCompression=true
 WizardImageFile=installPicture.bmp
 ShowLanguageDialog=yes
 LanguageDetectionMethod=locale
-VersionInfoVersion=1.9.3
-VersionInfoCompany=Qtpfsgui Dev Team
+VersionInfoVersion=2.0.0
+VersionInfoCompany=LuminanceHDR Dev Team
 AppID={{7020FC34-6E04-4858-924D-354B28CB2402}
 DisableReadyMemo=true
 ShowTasksTreeLines=true
@@ -50,22 +50,22 @@ Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:Ad
 Name: quicklaunchicon; Description: {cm:CreateQuickLaunchIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
 
 [Files]
-Source: D:\Programs\Qtpfsgui\qtpfsgui.exe; DestDir: {app}; Components: core; Flags: ignoreversion
-Source: D:\Programs\Qtpfsgui\*; DestDir: {app}; Components: core; Flags: ignoreversion
-Source: D:\Programs\Qtpfsgui\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: D:\Programs\Qtpfsgui\html\*; DestDir: {app}\html\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: D:\Programs\Qtpfsgui\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: D:\Programs\LuminanceHDR\luminance.exe; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: D:\Programs\LuminanceHDR\*; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: D:\Programs\LuminanceHDR\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: D:\Programs\LuminanceHDR\help\*; DestDir: {app}\help\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: D:\Programs\LuminanceHDR\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
-Root: HKCU; Subkey: Software\Qtpfsgui; Flags: uninsdeletekey
+Root: HKCU; Subkey: Software\LuminanceHDR; Flags: uninsdeletekey
 
 [Icons]
-Name: {group}\Qtpfsgui; Filename: {app}\qtpfsgui.exe
-Name: {group}\{cm:ProgramOnTheWeb,Qtpfsgui}; Filename: http://qtpfsgui.sourceforge.net/
-Name: {group}\{cm:UninstallProgram,Qtpfsgui}; Filename: {uninstallexe}
-Name: {commondesktop}\Qtpfsgui; Filename: {app}\qtpfsgui.exe; Tasks: desktopicon
-Name: {userappdata}\Microsoft\Internet Explorer\Quick Launch\Qtpfsgui; Filename: {app}\qtpfsgui.exe; Tasks: quicklaunchicon
+Name: {group}\LuminanceHDR; Filename: {app}\luminance.exe
+Name: {group}\{cm:ProgramOnTheWeb,LuminanceHDR}; Filename: http://qtpfsgui.sourceforge.net/
+Name: {group}\{cm:UninstallProgram,LuminanceHDR}; Filename: {uninstallexe}
+Name: {commondesktop}\LuminanceHDR; Filename: {app}\luminance.exe; Tasks: desktopicon
+Name: {userappdata}\Microsoft\Internet Explorer\Quick Launch\LuminanceHDR; Filename: {app}\luminance.exe; Tasks: quicklaunchicon
 
 [Run]
-Filename: {app}\qtpfsgui.exe; Description: {cm:LaunchProgram,Qtpfsgui}; Flags: nowait postinstall skipifsilent
+Filename: {app}\luminance.exe; Description: {cm:LaunchProgram,LuminanceHDR}; Flags: nowait postinstall skipifsilent
