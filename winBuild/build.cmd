@@ -39,7 +39,7 @@ copy %DLL_PACKAGE_DIR%\libIlmImf-6.dll output\
 copy %DLL_PACKAGE_DIR%\libIlmThread-6.dll output\
 copy %DLL_PACKAGE_DIR%\zlib1.dll output\
 copy %DLL_PACKAGE_DIR%\libexiv2-5.dll output\
-rem copy %DLL_PACKAGE_DIR%\libstdc++_sjlj_6.dll output\
+copy "%DLL_PACKAGE_DIR%\libstdc++_sjlj_6.dll" output\
 copy %DLL_PACKAGE_DIR%\libgcc_sjlj_1.dll output\
 copy %DLL_PACKAGE_DIR%\libfftw3f-3.dll output\
 copy %DLL_PACKAGE_DIR%\libgsl-0.dll output\
@@ -50,6 +50,8 @@ copy %DLL_PACKAGE_DIR%\pthreadGC2.dll output\
 
 echo Copying Mingw Dlls ..................................................
 copy %MINGW_DIR%\bin\libgomp-1.dll output\
+rem copy %MINGW_DIR%\bin\libstdc++_sjlj_6.dll output\
+copy %MINGW_DIR%\bin\mingwm10.dll output\
 copy %MINGW_DIR%\bin\libgcc_s_dw2-1.dll output\
 
 echo Copying translations ..................................................
