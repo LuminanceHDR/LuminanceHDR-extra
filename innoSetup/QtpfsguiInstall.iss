@@ -2,18 +2,18 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 [Setup]
-AppName=LuminanceHDR
-AppVerName=LuminanceHDR 2.0.0
-AppPublisher=LuminanceHDR Dev Team
+AppName=Luminance HDR
+AppVerName=Luminance HDR 2.1.0
+AppPublisher=Luminance HDR Dev Team
 AppPublisherURL=http://qtpfsgui.sourceforge.net/
 AppSupportURL=http://qtpfsgui.sourceforge.net/
 AppUpdatesURL=http://qtpfsgui.sourceforge.net/
-DefaultDirName={pf}\LuminanceHDR
-DefaultGroupName=LuminanceHDR
+DefaultDirName={pf}\Luminance HDR
+DefaultGroupName=Luminance HDR
 AllowNoIcons=true
 LicenseFile=LICENSE
 OutputDir=output
-OutputBaseFilename=LuminanceHDR-windows-SETUP-v2.0.0
+OutputBaseFilename=Luminance-HDR-Win32-SETUP-v2.1.0
 SetupIconFile=luminance.ico
 Compression=lzma/ultra64
 ; NO Compression only for testing
@@ -22,13 +22,16 @@ SolidCompression=true
 WizardImageFile=installPicture.bmp
 ShowLanguageDialog=yes
 LanguageDetectionMethod=locale
-VersionInfoVersion=2.0.0
-VersionInfoCompany=LuminanceHDR Dev Team
+VersionInfoVersion=2.1.0
+VersionInfoCompany=Luminance HDR Dev Team
 AppID={{7020FC34-6E04-4858-924D-354B28CB2402}
 DisableReadyMemo=true
 ShowTasksTreeLines=true
 AlwaysUsePersonalGroup=false
 InternalCompressLevel=ultra64
+
+;ArchitecturesInstallIn64BitMode=x64 
+
 
 [Languages]
 Name: en; MessagesFile: compiler:Default.isl
@@ -50,22 +53,23 @@ Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:Ad
 Name: quicklaunchicon; Description: {cm:CreateQuickLaunchIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
 
 [Files]
-Source: D:\Programs\LuminanceHDR\luminance.exe; DestDir: {app}; Components: core; Flags: ignoreversion
-Source: D:\Programs\LuminanceHDR\*; DestDir: {app}; Components: core; Flags: ignoreversion
-Source: D:\Programs\LuminanceHDR\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: D:\Programs\LuminanceHDR\help\*; DestDir: {app}\help\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: D:\Programs\LuminanceHDR\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\luminance-hdr.exe; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\*; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\sqldrivers\*; DestDir: {app}\sqldrivers\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\help\*; DestDir: {app}\help\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
-Root: HKCU; Subkey: Software\LuminanceHDR; Flags: uninsdeletekey
+Root: HKCU; Subkey: Software\Luminance HDR; Flags: uninsdeletekey
 
 [Icons]
-Name: {group}\LuminanceHDR; Filename: {app}\luminance.exe
-Name: {group}\{cm:ProgramOnTheWeb,LuminanceHDR}; Filename: http://qtpfsgui.sourceforge.net/
-Name: {group}\{cm:UninstallProgram,LuminanceHDR}; Filename: {uninstallexe}
-Name: {commondesktop}\LuminanceHDR; Filename: {app}\luminance.exe; Tasks: desktopicon
-Name: {userappdata}\Microsoft\Internet Explorer\Quick Launch\LuminanceHDR; Filename: {app}\luminance.exe; Tasks: quicklaunchicon
+Name: {group}\Luminance HDR; Filename: {app}\luminance-hdr.exe
+Name: {group}\{cm:ProgramOnTheWeb,Luminance HDR}; Filename: http://qtpfsgui.sourceforge.net/
+Name: {group}\{cm:UninstallProgram,Luminance HDR}; Filename: {uninstallexe}
+Name: {commondesktop}\Luminance HDR; Filename: {app}\luminance-hdr.exe; Tasks: desktopicon
+Name: {userappdata}\Microsoft\Internet Explorer\Quick Launch\Luminance HDR; Filename: {app}\luminance-hdr.exe; Tasks: quicklaunchicon
 
 [Run]
-Filename: {app}\luminance.exe; Description: {cm:LaunchProgram,LuminanceHDR}; Flags: nowait postinstall skipifsilent
+Filename: {app}\luminance-hdr.exe; Description: {cm:LaunchProgram,Luminance HDR}; Flags: nowait postinstall skipifsilent
