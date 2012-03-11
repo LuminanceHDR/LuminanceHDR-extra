@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=Luminance HDR
-AppVerName=Luminance HDR 2.2.0
+AppVerName=Luminance HDR 2.2.1
 AppPublisher=Luminance HDR Dev Team
 AppPublisherURL=http://qtpfsgui.sourceforge.net/
 AppSupportURL=http://qtpfsgui.sourceforge.net/
@@ -13,7 +13,7 @@ DefaultGroupName=Luminance HDR
 AllowNoIcons=true
 LicenseFile=LICENSE
 OutputDir=output
-OutputBaseFilename=Luminance-HDR-Win32-SETUP-v2.2.0
+OutputBaseFilename=Luminance-HDR-Win32-SETUP-v2.2.1
 SetupIconFile=luminance.ico
 Compression=lzma/ultra64
 ; NO Compression only for testing
@@ -22,14 +22,13 @@ SolidCompression=true
 WizardImageFile=installPicture.bmp
 ShowLanguageDialog=yes
 LanguageDetectionMethod=locale
-VersionInfoVersion=2.2.0
+VersionInfoVersion=2.2.1
 VersionInfoCompany=Luminance HDR Dev Team
 AppID={{7020FC34-6E04-4858-924D-354B28CB2402}
 DisableReadyMemo=true
 ShowTasksTreeLines=true
 AlwaysUsePersonalGroup=false
 InternalCompressLevel=ultra64
-
 ;ArchitecturesInstallIn64BitMode=x64 
 
 
@@ -47,6 +46,11 @@ Name: no; MessagesFile: compiler:Languages\Norwegian.isl
 Name: core; Description: Core Files; Types: full compact custom; Flags: fixed
 Name: doc; Description: Documenatation; Types: full
 Name: i18n; Description: Translations; Types: full
+Name: asoc; Description: File associations;
+Name: asoc/raw; Description: RAW files;
+Name: asoc/exr; Description: *.exr; Types: full
+Name: asoc/hdr; Description: *.hdr; Types: full
+Name: asoc/tiff; Description: *.tiff; Types: full
 
 [Tasks]
 Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
@@ -63,6 +67,39 @@ Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\i1
 
 [Registry]
 Root: HKCU; Subkey: Software\Luminance HDR; Flags: uninsdeletekey
+
+;*.crw *.cr2 *.nef *.dng *.mrw *.orf *.kdc *.dcr *.arw *.raf *.ptx *.pef *.x3f *.raw *.sr2 *.rw2 *.3fr *.mef *.mos *.erf *.nrw *.srw"
+
+Root: HKCR; Subkey: ".crw"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".cr2"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".nef"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".dng"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".mrw"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".orf"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".kdc"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".dcr"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".arw"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".raf"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".ptx"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".pef"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".x3f"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".raw"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".sr2"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".rw2"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".3fr"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".mef"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".mos"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".erf"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".nrw"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".srw"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/raw; Flags: uninsdeletevalue
+
+Root: HKCR; Subkey: ".exr"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/exr; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".hdr"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/hdr; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".tiff"; ValueType: string; ValueName: ""; ValueData: "LuminanceHDR"; Components: asoc/tiff; Flags: uninsdeletevalue
+
+Root: HKCR; Subkey: "LuminanceHDR"; ValueType: string; ValueName: ""; ValueData: "Luminance HDR"; Flags: uninsdeletekey 
+Root: HKCR; Subkey: "LuminanceHDR\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\luminance-hdr.exe,0" 
+Root: HKCR; Subkey: "LuminanceHDR\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\luminance-hdr.exe"" ""%1""" 
 
 [Icons]
 Name: {group}\Luminance HDR; Filename: {app}\luminance-hdr.exe
