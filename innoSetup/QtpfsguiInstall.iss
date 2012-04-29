@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=Luminance HDR
-AppVerName=Luminance HDR 2.2.1
+AppVerName=Luminance HDR 2.3.0-beta1
 AppPublisher=Luminance HDR Dev Team
 AppPublisherURL=http://qtpfsgui.sourceforge.net/
 AppSupportURL=http://qtpfsgui.sourceforge.net/
@@ -13,7 +13,7 @@ DefaultGroupName=Luminance HDR
 AllowNoIcons=true
 LicenseFile=LICENSE
 OutputDir=output
-OutputBaseFilename=Luminance-HDR-Win32-SETUP-v2.2.1
+OutputBaseFilename=Luminance-HDR-Win32-SETUP-v2.3.0-beta1
 SetupIconFile=luminance.ico
 Compression=lzma/ultra64
 ; NO Compression only for testing
@@ -22,7 +22,7 @@ SolidCompression=true
 WizardImageFile=installPicture.bmp
 ShowLanguageDialog=yes
 LanguageDetectionMethod=locale
-VersionInfoVersion=2.2.1
+VersionInfoVersion=2.3.0.99
 VersionInfoCompany=Luminance HDR Dev Team
 AppID={{7020FC34-6E04-4858-924D-354B28CB2402}
 DisableReadyMemo=true
