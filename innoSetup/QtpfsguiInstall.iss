@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=Luminance HDR
-AppVerName=Luminance HDR 2.3.0-beta1
+AppVerName=Luminance HDR 2.3.1
 AppPublisher=Luminance HDR Dev Team
 AppPublisherURL=http://qtpfsgui.sourceforge.net/
 AppSupportURL=http://qtpfsgui.sourceforge.net/
@@ -11,9 +11,9 @@ AppUpdatesURL=http://qtpfsgui.sourceforge.net/
 DefaultDirName={pf}\Luminance HDR
 DefaultGroupName=Luminance HDR
 AllowNoIcons=true
-LicenseFile=LICENSE
+LicenseFile=C:\Data\DevelopRelease\x64\LuminanceHdrStuff\qtpfsgui.build\Release\LICENSE
 OutputDir=output
-OutputBaseFilename=Luminance-HDR-Win32-SETUP-v2.3.0-beta1
+OutputBaseFilename=Luminance-HDR-x64-SETUP-v2.3.1
 SetupIconFile=luminance.ico
 Compression=lzma/ultra64
 ; NO Compression only for testing
@@ -22,14 +22,15 @@ SolidCompression=true
 WizardImageFile=installPicture.bmp
 ShowLanguageDialog=yes
 LanguageDetectionMethod=locale
-VersionInfoVersion=2.3.0.99
+VersionInfoVersion=2.3.1.00
 VersionInfoCompany=Luminance HDR Dev Team
 AppID={{7020FC34-6E04-4858-924D-354B28CB2402}
 DisableReadyMemo=true
 ShowTasksTreeLines=true
 AlwaysUsePersonalGroup=false
 InternalCompressLevel=ultra64
-;ArchitecturesInstallIn64BitMode=x64 
+
+ArchitecturesInstallIn64BitMode=x64 
 
 
 [Languages]
@@ -44,7 +45,7 @@ Name: no; MessagesFile: compiler:Languages\Norwegian.isl
 
 [Components]
 Name: core; Description: Core Files; Types: full compact custom; Flags: fixed
-Name: doc; Description: Documenatation; Types: full
+Name: doc; Description: Documentation; Types: full
 Name: i18n; Description: Translations; Types: full
 Name: asoc; Description: File associations;
 Name: asoc/raw; Description: RAW files;
@@ -55,14 +56,16 @@ Name: asoc/tiff; Description: *.tiff; Types: full
 [Tasks]
 Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
 Name: quicklaunchicon; Description: {cm:CreateQuickLaunchIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
+Name: portablemode; Description: "Portable Mode"; Flags: unchecked
 
 [Files]
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\luminance-hdr.exe; DestDir: {app}; Components: core; Flags: ignoreversion
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\*; DestDir: {app}; Components: core; Flags: ignoreversion
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\sqldrivers\*; DestDir: {app}\sqldrivers\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\help\*; DestDir: {app}\help\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\x64\LuminanceHdrStuff\qtpfsgui.build\Release\luminance-hdr.exe; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: C:\Data\DevelopRelease\x64\LuminanceHdrStuff\qtpfsgui.build\Release\*; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: C:\Data\DevelopRelease\x64\LuminanceHdrStuff\qtpfsgui.build\Release\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\x64\LuminanceHdrStuff\qtpfsgui.build\Release\sqldrivers\*; DestDir: {app}\sqldrivers\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\x64\LuminanceHdrStuff\qtpfsgui.build\Release\help\*; DestDir: {app}\help\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\x64\LuminanceHdrStuff\qtpfsgui.build\Release\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: PortableMode.txt; DestDir: {app}; Tasks: portablemode; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
@@ -110,3 +113,6 @@ Name: {userappdata}\Microsoft\Internet Explorer\Quick Launch\Luminance HDR; File
 
 [Run]
 Filename: {app}\luminance-hdr.exe; Description: {cm:LaunchProgram,Luminance HDR}; Flags: nowait postinstall skipifsilent
+
+[Setup]
+Uninstallable=not IsTaskSelected('portablemode')
