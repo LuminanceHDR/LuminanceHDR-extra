@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=Luminance HDR
-AppVerName=Luminance HDR 2.3.1
+AppVerName=Luminance HDR 2.4.0
 AppPublisher=Luminance HDR Dev Team
 AppPublisherURL=http://qtpfsgui.sourceforge.net/
 AppSupportURL=http://qtpfsgui.sourceforge.net/
@@ -11,9 +11,9 @@ AppUpdatesURL=http://qtpfsgui.sourceforge.net/
 DefaultDirName={pf}\Luminance HDR
 DefaultGroupName=Luminance HDR
 AllowNoIcons=true
-LicenseFile=C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\LICENSE
+LicenseFile=C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\LICENSE
 OutputDir=output
-OutputBaseFilename=Luminance-HDR-Win32-SETUP-v2.3.1
+OutputBaseFilename=Luminance-HDR-Win32-SETUP-v2.4.0
 SetupIconFile=luminance.ico
 Compression=lzma/ultra64
 ; NO Compression only for testing
@@ -22,7 +22,7 @@ SolidCompression=true
 WizardImageFile=installPicture.bmp
 ShowLanguageDialog=yes
 LanguageDetectionMethod=locale
-VersionInfoVersion=2.3.1.00
+VersionInfoVersion=2.4.0.01
 VersionInfoCompany=Luminance HDR Dev Team
 AppID={{7020FC34-6E04-4858-924D-354B28CB2402}
 DisableReadyMemo=true
@@ -35,6 +35,7 @@ InternalCompressLevel=ultra64
 
 [Languages]
 Name: en; MessagesFile: compiler:Default.isl
+Name: da; MessagesFile: compiler:Languages\Danish.isl
 Name: de; MessagesFile: compiler:Languages\German.isl
 Name: es; MessagesFile: compiler:Languages\Spanish.isl
 Name: fr; MessagesFile: compiler:Languages\French.isl
@@ -42,9 +43,12 @@ Name: hu; MessagesFile: compiler:Languages\Hungarian.isl
 Name: it; MessagesFile: compiler:Languages\Italian.isl
 Name: nl; MessagesFile: compiler:Languages\Dutch.isl
 Name: no; MessagesFile: compiler:Languages\Norwegian.isl
+Name: pt; MessagesFile: compiler:Languages\Portuguese.isl
+
 
 [Components]
 Name: core; Description: Core Files; Types: full compact custom; Flags: fixed
+Name: hugin; Description: Hugin AIS; Types: full compact custom; Flags: fixed
 Name: doc; Description: Documentation; Types: full
 Name: i18n; Description: Translations; Types: full
 Name: asoc; Description: File associations;
@@ -59,12 +63,13 @@ Name: quicklaunchicon; Description: {cm:CreateQuickLaunchIcon}; GroupDescription
 Name: portablemode; Description: "Portable Mode"; Flags: unchecked
 
 [Files]
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\luminance-hdr.exe; DestDir: {app}; Components: core; Flags: ignoreversion
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\*; DestDir: {app}; Components: core; Flags: ignoreversion
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\sqldrivers\*; DestDir: {app}\sqldrivers\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\help\*; DestDir: {app}\help\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: C:\Data\DevelopRelease\Win32\LuminanceHdrStuff\qtpfsgui.build\Release\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\luminance-hdr.exe; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\*; DestDir: {app}; Components: core; Flags: ignoreversion
+Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\sqldrivers\*; DestDir: {app}\sqldrivers\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\help\*; DestDir: {app}\help\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\hugin\*; DestDir: {app}\hugin\; Components: hugin; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: PortableMode.txt; DestDir: {app}; Tasks: portablemode; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
