@@ -67,6 +67,7 @@ Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\lu
 Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\*; DestDir: {app}; Components: core; Flags: ignoreversion
 Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\imageformats\*; DestDir: {app}\imageformats\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\sqldrivers\*; DestDir: {app}\sqldrivers\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\platforms\*; DestDir: {app}\platforms\; Components: core; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\help\*; DestDir: {app}\help\; Components: doc; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\i18n\*; DestDir: {app}\i18n\; Components: i18n; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: C:\Data\DevelopRelease\win32\LuminanceHdrStuff\qtpfsgui.build\Release\hugin\*; DestDir: {app}\hugin\; Components: hugin; Flags: ignoreversion recursesubdirs createallsubdirs
