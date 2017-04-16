@@ -30,7 +30,7 @@ ShowTasksTreeLines=true
 AlwaysUsePersonalGroup=false
 InternalCompressLevel=ultra64
 
-;ArchitecturesInstallIn64BitMode=x64
+ArchitecturesInstallIn64BitMode=x64
 
 
 [Languages]
